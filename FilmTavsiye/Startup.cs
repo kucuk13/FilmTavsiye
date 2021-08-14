@@ -49,6 +49,10 @@ namespace FilmTavsiye
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "areas", 
+                    pattern: "{area}/{Controller=Home}/{Action=Index}/{Id?}");
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
