@@ -7,7 +7,6 @@
 <div class="container">
     <form method="post" data-ajax="true" data-ajax-url="/Login/Index">
         @Html.AntiForgeryToken()
-        @Html.ValidationSummary(false)
 
         <div class="row">
             <div class="col-md-4" )>
@@ -26,11 +25,19 @@
             </div>
 
             <div class="col-md-8">
-                @Html.TextBoxFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <label>@Html.CheckBoxFor(m => m.RememberMe) &nbsp; @Html.LabelFor(m => m.RememberMe)</label>
+                @Html.ValidationMessageFor(m => m.RememberMe, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.ValidationSummary(false)
         <input class="form-button" type="submit" value="Login" />
     </form>
 </div>
