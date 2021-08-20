@@ -1,0 +1,36 @@
+﻿@model FilmTavsiye.Models.Dtos.LoginDto
+
+@{ 
+    Layout = null;
+}
+
+<div class="container">
+    <form method="post" data-ajax="true" data-ajax-url="/Login/Index">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(false)
+
+        <div class="row">
+            <div class="col-md-4" )>
+                @Html.LabelFor(m => m.UserName)
+            </div>
+
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                @Html.LabelFor(m => m.Password)
+            </div>
+
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input class="form-button" type="submit" value="Login" />
+    </form>
+</div>

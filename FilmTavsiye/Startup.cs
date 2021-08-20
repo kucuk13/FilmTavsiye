@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Serialization;
 
 namespace FilmTavsiye
 {
@@ -23,6 +26,17 @@ namespace FilmTavsiye
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().AddRazorRuntimeCompilation();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
+            {
+                option.LoginPath = new PathString("/Login/Index");
+                option.Cookie.Name = "FilmTavsiye";
+                option.Cookie.HttpOnly = true; //js ile cookie çekilemez
+                option.Cookie.SameSite = SameSiteMode.Strict; //hiç kimse bu cookie'yi kullanamaz.
+                option.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+            });
+
             services.AddControllersWithViews();
         }
 
@@ -44,6 +58,7 @@ namespace FilmTavsiye
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
