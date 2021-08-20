@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FilmTavsiye.Models.DbModels;
 
-namespace FilmTavsiye.Models.Enums
+namespace FilmTavsiye.Models
 {
     public class Context : DbContext
     {
