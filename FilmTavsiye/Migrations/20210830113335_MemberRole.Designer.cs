@@ -3,15 +3,17 @@ using System;
 using FilmTavsiye.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace FilmTavsiye.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20210830113335_MemberRole")]
+    partial class MemberRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,7 +66,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(6969),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(4619),
                             CreatedMemberId = 1,
                             Name = "System Roles",
                             Status = 1
@@ -72,7 +74,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7749),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5394),
                             CreatedMemberId = 1,
                             Name = "Status",
                             Status = 1
@@ -80,7 +82,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7754),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5399),
                             CreatedMemberId = 1,
                             Name = "Task",
                             Status = 1
@@ -88,7 +90,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7755),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5401),
                             CreatedMemberId = 1,
                             Name = "Movie Type",
                             Status = 1
@@ -96,7 +98,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7757),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5402),
                             CreatedMemberId = 1,
                             Name = "Country",
                             Status = 1
@@ -104,7 +106,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7760),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5406),
                             CreatedMemberId = 1,
                             Name = "Media Type",
                             Status = 1
@@ -112,7 +114,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7761),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5407),
                             CreatedMemberId = 1,
                             Name = "Photo Type",
                             Status = 1
@@ -120,7 +122,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7763),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5408),
                             CreatedMemberId = 1,
                             Name = "Video Type",
                             Status = 1
@@ -128,7 +130,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 321, DateTimeKind.Local).AddTicks(7764),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(5409),
                             CreatedMemberId = 1,
                             Name = "Pegi",
                             Status = 1
@@ -186,7 +188,7 @@ namespace FilmTavsiye.Migrations
                         {
                             Id = 1,
                             ConstantId = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(82),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 402, DateTimeKind.Local).AddTicks(9730),
                             CreatedMemberId = 1,
                             Name = "Active",
                             Status = 1
@@ -195,7 +197,7 @@ namespace FilmTavsiye.Migrations
                         {
                             Id = 2,
                             ConstantId = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(641),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(290),
                             CreatedMemberId = 1,
                             Name = "Passive",
                             Status = 1
@@ -204,7 +206,7 @@ namespace FilmTavsiye.Migrations
                         {
                             Id = 3,
                             ConstantId = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(646),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(295),
                             CreatedMemberId = 1,
                             Name = "Deleted",
                             Status = 1
@@ -213,7 +215,7 @@ namespace FilmTavsiye.Migrations
                         {
                             Id = 4,
                             ConstantId = 1,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(648),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(520),
                             CreatedMemberId = 1,
                             Name = "Admin",
                             Status = 1
@@ -222,7 +224,7 @@ namespace FilmTavsiye.Migrations
                         {
                             Id = 5,
                             ConstantId = 1,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(649),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(522),
                             CreatedMemberId = 1,
                             Name = "Editor",
                             Status = 1
@@ -271,7 +273,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 319, DateTimeKind.Local).AddTicks(4455),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 400, DateTimeKind.Local).AddTicks(3866),
                             CreatedMemberId = 1,
                             Name = "admin",
                             Password = "123456",
@@ -280,7 +282,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 320, DateTimeKind.Local).AddTicks(5968),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 401, DateTimeKind.Local).AddTicks(3926),
                             CreatedMemberId = 1,
                             Name = "editor",
                             Password = "123456",
@@ -340,7 +342,7 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(2166),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(2225),
                             CreatedMemberId = 1,
                             MemberId = 1,
                             RoleId = 4,
@@ -349,66 +351,12 @@ namespace FilmTavsiye.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 35, 17, 322, DateTimeKind.Local).AddTicks(2666),
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 33, 35, 403, DateTimeKind.Local).AddTicks(3049),
                             CreatedMemberId = 1,
                             MemberId = 2,
                             RoleId = 5,
                             Status = 1
                         });
-                });
-
-            modelBuilder.Entity("FilmTavsiye.Models.DbModels.Movie", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<DateTime>("CreatedDateTime")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<int>("CreatedMemberId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime?>("DeletedDateTime")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<int?>("DeletedMemberId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("DurationInMinutes")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("UpdatedDateTime")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<int?>("UpdatedMemberId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Year")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedMemberId");
-
-                    b.HasIndex("DeletedMemberId");
-
-                    b.HasIndex("UpdatedMemberId");
-
-                    b.ToTable("Movies");
                 });
 
             modelBuilder.Entity("FilmTavsiye.Models.DbModels.Constant", b =>
@@ -500,29 +448,6 @@ namespace FilmTavsiye.Migrations
                     b.Navigation("Member");
 
                     b.Navigation("Role");
-
-                    b.Navigation("UpdatedMember");
-                });
-
-            modelBuilder.Entity("FilmTavsiye.Models.DbModels.Movie", b =>
-                {
-                    b.HasOne("FilmTavsiye.Models.DbModels.Member", "CreatedMember")
-                        .WithMany()
-                        .HasForeignKey("CreatedMemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("FilmTavsiye.Models.DbModels.Member", "DeletedMember")
-                        .WithMany()
-                        .HasForeignKey("DeletedMemberId");
-
-                    b.HasOne("FilmTavsiye.Models.DbModels.Member", "UpdatedMember")
-                        .WithMany()
-                        .HasForeignKey("UpdatedMemberId");
-
-                    b.Navigation("CreatedMember");
-
-                    b.Navigation("DeletedMember");
 
                     b.Navigation("UpdatedMember");
                 });

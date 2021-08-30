@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FilmTavsiye.Models.Infrastructures
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntityForMember
     {
         [Key]
         public int Id { get; set; }
@@ -21,14 +21,5 @@ namespace FilmTavsiye.Models.Infrastructures
         public DateTime? DeletedDateTime { get; set; }
         public int? DeletedMemberId { get; set; }
         public Status Status { get; set; } = Status.Active;
-
-
-
-        [ForeignKey("CreatedMemberId")]
-        public virtual Member CreatedMember { get; set; }
-        [ForeignKey("UpdatedMemberId")]
-        public virtual Member UpdatedMember { get; set; }
-        [ForeignKey("DeletedMemberId")]
-        public virtual Member DeletedMember { get; set; }
     }
 }

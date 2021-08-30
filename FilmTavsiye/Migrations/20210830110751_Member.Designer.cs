@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FilmTavsiye.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210813201642_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20210830110751_Member")]
+    partial class Member
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace FilmTavsiye.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("FilmTavsiye.Models.DbModels.Movie", b =>
+            modelBuilder.Entity("FilmTavsiye.Models.DbModels.Member", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,23 +40,14 @@ namespace FilmTavsiye.Migrations
                     b.Property<int?>("DeletedMemberId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("DemandId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("DurationInMinutes")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<string>("Password")
+                        .HasColumnType("text");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedDateTime")
                         .HasColumnType("timestamp without time zone");
@@ -64,12 +55,29 @@ namespace FilmTavsiye.Migrations
                     b.Property<int?>("UpdatedMemberId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Year")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Movies");
+                    b.ToTable("Members");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 7, 50, 870, DateTimeKind.Local).AddTicks(1136),
+                            CreatedMemberId = 1,
+                            Name = "admin",
+                            Password = "123456",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDateTime = new DateTime(2021, 8, 30, 14, 7, 50, 871, DateTimeKind.Local).AddTicks(932),
+                            CreatedMemberId = 1,
+                            Name = "editor",
+                            Password = "123456",
+                            Status = 1
+                        });
                 });
 #pragma warning restore 612, 618
         }
