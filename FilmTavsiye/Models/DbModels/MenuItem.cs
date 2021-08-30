@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace FilmTavsiye.Models.DbModels
 {
-    public class ConstantValue : BaseEntity
+    public class MenuItem : BaseEntity
     {
         public string Name { get; set; }
-        public int ConstantId { get; set; }
-        public int Order { get; set; }
+        public string Url { get; set; }
+        public string Icon { get; set; }
+        public int TypeId { get; set; }
 
-        [ForeignKey("ConstantId")]
-        public virtual Constant Constant { get; set; }
+        [ForeignKey("TypeId")]
+        public virtual ConstantValue Type { get; set; }
     }
 }

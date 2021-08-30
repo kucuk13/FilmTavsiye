@@ -87,6 +87,18 @@ namespace FilmTavsiye.Models
                     Name = "Pegi",
                     CreatedMemberId = 1
                 },
+                new Constant
+                {
+                    Id = 10,
+                    Name = "Menu Type",
+                    CreatedMemberId = 1
+                },
+                new Constant
+                {
+                    Id = 11,
+                    Name = "Notification Type",
+                    CreatedMemberId = 1
+                },
             };
         }
 

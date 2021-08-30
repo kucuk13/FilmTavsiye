@@ -41,5 +41,9 @@ namespace FilmTavsiye.Models
         public DbSet<ConstantValue> ConstantValues { get; set; }
         public DbSet<MemberRole> MemberRoles { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<NotificationMember> NotificationMembers { get; set; }
+        public DbSet<MenuItem> MenuItems { get; set; }
+        public DbSet<MenuItemRole> MenuItemRoles { get; set; }
     }
 }
