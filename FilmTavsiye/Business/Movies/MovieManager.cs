@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using FilmTavsiye.Models;
 using FilmTavsiye.Models.DbModels;
 
-namespace FilmTavsiye.Business.Movies
+namespace FilmTavsiye.Business
 {
     public class MovieManager : IMovieManager
     {

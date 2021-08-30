@@ -10,16 +10,20 @@ using FilmTavsiye.Models.Dtos;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using FilmTavsiye.Business;
 
 namespace FilmTavsiye.Controllers
 {
     public class LoginController : Controller
     {
         private readonly ILogger<LoginController> _logger;
+        private readonly ILoginManager _loginManager;
 
-        public LoginController(ILogger<LoginController> logger)
+        public LoginController(ILogger<LoginController> logger, ILoginManager loginManager)
         {
             _logger = logger;
+            _loginManager = loginManager;
+
         }
 
         [HttpGet]
@@ -32,7 +36,7 @@ namespace FilmTavsiye.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (model.UserName.Equals("kaan") && model.Password.Equals("123"))
+                if (_loginManager.Login(model).Result)
                 {
                     var claims = new List<Claim>
                     {

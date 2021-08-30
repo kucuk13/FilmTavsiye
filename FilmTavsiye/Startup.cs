@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
+using FilmTavsiye.Business;
 
 namespace FilmTavsiye
 {
@@ -38,6 +39,9 @@ namespace FilmTavsiye
             });
 
             services.AddControllersWithViews();
+
+            services.AddScoped<ILoginManager, LoginManager>();
+            services.AddScoped<IMovieManager, MovieManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

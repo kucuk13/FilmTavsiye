@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FilmTavsiye.Models.DbModels;
+using FilmTavsiye.Models.Dtos;
 
 namespace FilmTavsiye.Business
 {
-    public interface IMovieManager
+    public interface ILoginManager
     {
-        public List<Movie> GetAll();
-        public Movie Get();
+        public Task<bool> Login(LoginDto model);
     }
 }
